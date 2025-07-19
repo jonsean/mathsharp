@@ -1,0 +1,175 @@
+[gd_scene load_steps=2 format=3 uid="uid://yl4ude5wii73"]
+
+[ext_resource type="Script" path="res://GameCanvas.cs" id="1_jqkto"]
+
+[node name="GameCanvas" type="CanvasLayer"]
+layer = -1
+script = ExtResource("1_jqkto")
+
+[node name="GBColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+color = Color(0.241094, 0.290646, 0.704409, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="GBColorRect"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -78.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.345098, 0.0156863, 0.913725, 1)
+
+[node name="ScoreContainer" type="MarginContainer" parent="GBColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -83.0
+offset_right = 558.0
+grow_vertical = 0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="GBColorRect/ScoreContainer"]
+layout_mode = 2
+mouse_filter = 1
+color = Color(0.458824, 0.458824, 0.458824, 0.427451)
+
+[node name="ScoreLabel" type="Label" parent="GBColorRect/ScoreContainer/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.5
+offset_top = -11.5
+offset_right = 51.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.867007, 0.952821, 1.54018e-06, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 7
+theme_override_font_sizes/font_size = 80
+text = "Score = 0 / 20"
+horizontal_alignment = 1
+
+[node name="ClockContainer" type="MarginContainer" parent="GBColorRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -558.0
+offset_top = -83.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="GBColorRect/ClockContainer"]
+layout_mode = 2
+mouse_filter = 1
+color = Color(0.458824, 0.458824, 0.458824, 0.427451)
+
+[node name="ClockLabel" type="Label" parent="GBColorRect/ClockContainer/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.5
+offset_top = -55.0
+offset_right = 102.5
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.936703, 0.989545, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "00:00"
+horizontal_alignment = 1
+
+[node name="ProblemContainer" type="MarginContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -576.0
+offset_right = 579.0
+offset_bottom = 113.0
+grow_horizontal = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="ColorRect" type="ColorRect" parent="ProblemContainer"]
+layout_mode = 2
+mouse_filter = 1
+color = Color(0.458824, 0.458824, 0.458824, 0.427451)
+
+[node name="ProblemLabel" type="Label" parent="ProblemContainer/ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -102.5
+offset_top = -55.0
+offset_right = 102.5
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "a + __ = 10"
+horizontal_alignment = 1
+
+[node name="ChickenContainer" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -128.0
+offset_bottom = -128.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GameTimer" type="Timer" parent="."]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="SoundsPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[node name="SquakTimer" type="Timer" parent="."]
+
+[node name="ChickenPlayer1" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+max_polyphony = 6
+
+[node name="ChickenPlayer2" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
+[connection signal="resized" from="GBColorRect" to="." method="_on_gb_color_rect_resized"]
+[connection signal="finished" from="MusicPlayer" to="." method="_on_music_player_finished"]

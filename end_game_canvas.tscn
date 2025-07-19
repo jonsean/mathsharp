@@ -1,0 +1,100 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgrfrxeg6gken"]
+
+[ext_resource type="Script" path="res://EndGameCanvas.cs" id="1_05s1j"]
+[ext_resource type="Texture2D" uid="uid://c52c8d4ck4eua" path="res://images/chicken.png" id="1_77gw8"]
+
+[node name="EndGameCanvas" type="CanvasLayer"]
+script = ExtResource("1_05s1j")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.693662, 0.604441, 0.868947, 1)
+
+[node name="TextureRect" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -229.0
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("1_77gw8")
+
+[node name="TextureRect2" type="TextureRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -229.0
+offset_right = 152.0
+grow_vertical = 0
+texture = ExtResource("1_77gw8")
+flip_h = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -456.5
+offset_top = -243.5
+offset_right = 456.5
+offset_bottom = 243.5
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="MessageLabel" type="Label" parent="ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.899276, 0.822221, 0.319408, 1)
+theme_override_font_sizes/font_size = 200
+text = "You Won!"
+horizontal_alignment = 1
+
+[node name="TimeLabel" type="Label" parent="ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.899276, 0.822221, 0.319408, 1)
+theme_override_font_sizes/font_size = 50
+text = "Time: 00:00"
+horizontal_alignment = 1
+
+[node name="RankLabel" type="Label" parent="ColorRect/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.899276, 0.822221, 0.319408, 1)
+theme_override_font_sizes/font_size = 100
+text = "Gold Medal"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect/VBoxContainer"]
+layout_mode = 2
+
+[node name="MenuButton" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Main Menu"
+
+[node name="RetryButton" type="Button" parent="ColorRect/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 50
+text = "Retry"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="ColorRect/VBoxContainer/HBoxContainer/RetryButton" to="." method="_on_retry_button_pressed"]

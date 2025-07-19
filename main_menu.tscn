@@ -1,0 +1,530 @@
+[gd_scene load_steps=3 format=3 uid="uid://bp2w1cs1fis5t"]
+
+[ext_resource type="Script" path="res://MainMenu.cs" id="1_rchlh"]
+[ext_resource type="Texture2D" uid="uid://bwda8ab0jrq33" path="res://images/henGrey.png" id="2_mm2f8"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_rchlh")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -189.5
+offset_top = -130.0
+offset_right = 189.5
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.219608, 0.533333, 1, 0.87451)
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="ColorRect/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 45
+text = "Math Sharp"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -113.0
+offset_top = -68.0
+offset_right = 113.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+
+[node name="StartButton" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Start"
+
+[node name="ResetButton" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Reset"
+
+[node name="ModeButton" type="Button" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Set Mode"
+
+[node name="MuteButton" type="CheckButton" parent="ColorRect/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+button_pressed = true
+text = "Music
+"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ColorRect/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="ColorRect/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 5
+
+[node name="StartLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mode: a+b=?"
+
+[node name="MarginContainer2" type="MarginContainer" parent="ColorRect/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 5
+
+[node name="ResetLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer2/MarginContainer2"]
+layout_mode = 2
+text = "Reset"
+
+[node name="MarginContainer3" type="MarginContainer" parent="ColorRect/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 5
+
+[node name="ModeLabel" type="Label" parent="ColorRect/HBoxContainer/VBoxContainer2/MarginContainer3"]
+layout_mode = 2
+text = "Set Mode"
+
+[node name="MarginContainer4" type="MarginContainer" parent="ColorRect/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="VolumeSlider" type="HSlider" parent="ColorRect/HBoxContainer/VBoxContainer2/MarginContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 100.0
+
+[node name="ResetPlayerDataButton" type="Button" parent="ColorRect"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -31.0
+offset_right = 72.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Reset Player Data"
+
+[node name="ModeMenu" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(0, 260)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -297.0
+offset_top = -196.0
+offset_right = 233.0
+offset_bottom = 212.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.287174, 0.290292, 0.876706, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="ModeMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ModeMenu/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 23
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="ModeBackButton" type="Button" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Back"
+
+[node name="CheckBox1" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+button_pressed = true
+text = "Default a + ? = 10"
+alignment = 1
+
+[node name="CheckBox2" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "a + b = ?"
+alignment = 1
+
+[node name="CheckBox3" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "a + b + c = ?"
+alignment = 1
+
+[node name="CheckBox4" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "a - ? = 10"
+alignment = 1
+
+[node name="CheckBox5" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "a -b = ?"
+alignment = 1
+
+[node name="CheckBox6" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "a + b - c = ?"
+alignment = 1
+
+[node name="CheckBox7" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "a - b + c = ?"
+alignment = 1
+
+[node name="CheckBox8" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "a - b - c = ?"
+alignment = 1
+
+[node name="CheckBox9" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "Create the Problem ? = a "
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 11
+
+[node name="MarginContainer" type="MarginContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/margin_top = -4
+
+[node name="ABCAnyCheckBox" type="CheckBox" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Enable Negative Answers"
+
+[node name="HBoxContainer1" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel1" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "3:00"
+
+[node name="TextureRect11" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect12" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect13" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer1"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel2" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "3:30"
+
+[node name="TextureRect21" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect22" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect23" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel3" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "4:30"
+
+[node name="TextureRect31" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect32" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect33" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer3"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel4" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "3:00"
+
+[node name="TextureRect41" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect42" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect43" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer4"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel5" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "4:30"
+
+[node name="TextureRect51" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect52" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect53" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer5"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel6" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer6"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "5:00"
+
+[node name="TextureRect61" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer6"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect62" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer6"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect63" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer6"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel7" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer7"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "5:00"
+
+[node name="TextureRect71" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer7"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect72" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer7"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect73" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer7"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel8" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer8"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "5:00"
+
+[node name="TextureRect81" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer8"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect82" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer8"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect83" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer8"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="TimeLabel9" type="Label" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer9"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 19
+text = "3:00"
+
+[node name="TextureRect91" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer9"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect92" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer9"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="TextureRect93" type="TextureRect" parent="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/HBoxContainer9"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_mm2f8")
+expand_mode = 2
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
+
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/ModeButton" to="." method="_on_mode_button_pressed"]
+[connection signal="pressed" from="ColorRect/HBoxContainer/VBoxContainer/MuteButton" to="." method="_on_mute_button_pressed"]
+[connection signal="value_changed" from="ColorRect/HBoxContainer/VBoxContainer2/MarginContainer4/VolumeSlider" to="." method="_on_volume_slider_value_changed"]
+[connection signal="pressed" from="ColorRect/ResetPlayerDataButton" to="." method="_on_reset_player_data_button_pressed"]
+[connection signal="pressed" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/ModeBackButton" to="." method="_on_mode_back_button_pressed"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox1" to="." method="_on_check_box_1_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox2" to="." method="_on_check_box_2_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox3" to="." method="_on_check_box_3_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox4" to="." method="_on_check_box_4_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox5" to="." method="_on_check_box_5_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox6" to="." method="_on_check_box_6_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox7" to="." method="_on_check_box_7_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox8" to="." method="_on_check_box_8_toggled"]
+[connection signal="toggled" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer/CheckBox9" to="." method="_on_check_box_9_toggled"]
+[connection signal="pressed" from="ModeMenu/MarginContainer/HBoxContainer/VBoxContainer2/MarginContainer/ABCAnyCheckBox" to="." method="_on_abc_any_check_box_pressed"]

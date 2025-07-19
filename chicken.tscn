@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://cf4sprsoqnkef"]
+
+[ext_resource type="Texture2D" uid="uid://c52c8d4ck4eua" path="res://images/chicken.png" id="1_l48fm"]
+[ext_resource type="Script" path="res://Chicken.cs" id="2_5gs2y"]
+
+[node name="Chicken" type="Sprite2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_l48fm")
+script = ExtResource("2_5gs2y")
